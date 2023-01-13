@@ -1,0 +1,14 @@
+
+select name as 'Band Names' from  bands;
+select * from albums
+WHERE   release_year is not null
+order by release_year asc ;
+
+select distinct bands.name as 'Band Name' from bands  join albums
+WHERE band_id = bands.id;
+
+SELECT bands.name AS 'Band Name'
+FROM bands
+LEFT JOIN albums ON bands.id = albums.band_id
+GROUP BY albums.band_id
+HAVING COUNT(albums.id) = 0;

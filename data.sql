@@ -209,3 +209,7 @@ INSERT INTO songs(id,name,length,album_id) VALUES (180,'Magic Taborea',3+(22/60)
 INSERT INTO songs(id,name,length,album_id) VALUES (181,'Hearted',4+(00/60),18);
 INSERT INTO songs(id,name,length,album_id) VALUES (182,'Frodo''s Dream',3+(06/60),18);
 
+select name as 'Band Names' from  bands;
+select * from albums
+where   release_year is not null
+order by release_year asc ;
